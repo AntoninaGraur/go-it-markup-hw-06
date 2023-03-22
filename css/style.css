@@ -638,6 +638,10 @@ body {
   margin-right: 16px;
   vertical-align: middle;
 }
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--active-color);
+}
 .footer-btn {
   margin-top: 16px;
   width: 165px;
@@ -661,10 +665,6 @@ body {
 
   background: rgba(46, 47, 66, 0.4);
 
-  opacity: 0;
-
-  pointer-events: none;
-
   transition: opacity var(--animation), visibility var(--animation);
 }
 
@@ -677,14 +677,14 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-32%);
+  transform: translateX(-50%) translateY(-50%);
   background-color: var(--modal-wndw-clr);
   max-width: 408px;
   min-height: 576px;
   width: 100%;
 
   border-radius: 4px;
-  padding: 24px 24px 0px 24px;
+  padding: 24px;
 }
 .size-none {
   resize: none;
@@ -696,6 +696,7 @@ body {
   line-height: 1.5;
   margin-bottom: 16px;
   margin-top: 24px;
+  padding-top: 24px;
 }
 .modal-group {
   display: flex;
@@ -733,6 +734,7 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 4px;
   margin-top: 8px;
+  padding-left: 5px;
 }
 
 .accent-policy {
@@ -742,16 +744,23 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 4px;
   margin-top: 8px;
+  padding-left: 5px;
 }
 .modal-comments {
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-comments:focus {
+  border-color: var(--button-color);
+  outline: transparent;
+  width: 360px;
+  height: 138px;
 }
 
 .modal-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(-24px) translateY(24px);
+  top: 24px;
+  right: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -761,6 +770,10 @@ body {
   border-radius: 50%;
   background-color: var(--border-color);
   border: none;
+}
+.closing:hover,
+.closing:focus {
+  background-color: var(--active-color);
 }
 .modal-icon-close {
   fill: var(--main-text-color);
@@ -780,11 +793,12 @@ body {
 }
 
 .modal-chekbox-custom {
-  border: 2px solid var(--main-text-color);
-  height: 16px;
-  width: 16px;
-  color: transparent;
-  transition: color var(--animation) linear,
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 8px;
+  width: 10px;
+  margin-bottom: 24px;
+
+  transition: border-color var(--animation) linear,
     background-color var(--animation) linear;
 }
 .modal-chekbox-input:checked + .modal-chekbox-label > .modal-chekbox-custom {
@@ -793,16 +807,20 @@ body {
 }
 .submit-button {
   color: var(--modal-wndw-clr);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+
   padding: 16px 32px;
-  gap: 10px;
+  margin-top: 24px 102px;
   background: var(--button-color);
   width: 169px;
   height: 56px;
-  margin: 20px 120px 20px 100px;
+  margin: auto;
   border-radius: 4px;
-  border-color: var(--active-color);
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--active-color);
 }

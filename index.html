@@ -457,7 +457,7 @@
               type="email"
               placeholder="E-mail"
             />
-            <button class="footer-btn" tupe="submit">
+            <button class="footer-btn" type="submit">
               Subscribe
               <svg class="submit-icon" width="24" height="20">
                 <use href="./images/icons.svg#icon-frame-footer"></use>
@@ -471,22 +471,14 @@
     <!-- Modal window-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn" type="button" data-modal-close>
+        <button class="modal-btn closing" type="button" data-modal-close>
           <svg class="modal-icon-close" width="16" height="16">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        <form
-          class="modal-form"
-          name="madal_form"
-          novalidate
-          autocomplete="on"
-          method="post"
-        >
+        <form class="modal-form" name="madal_form">
           <div class="form-title">
-            <strong class=""
-              >Leave your contacts and we will call you back</strong
-            >
+            <strong>Leave your contacts and we will call you back</strong>
           </div>
           <div class="modal-group">
             <label class="label-name" for="user_name">Name</label>
@@ -534,7 +526,7 @@
               </svg>
             </div>
           </div>
-          <div class="modal-group">
+          <div class="modal-group modal-wrapper">
             <label class="label-name" for="comment">Comment</label>
             <textarea
               class="modal-comments size-none"
