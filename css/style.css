@@ -613,7 +613,7 @@ body {
 
 /* footer form */
 .down-form {
-  margin-left: 80px;
+  margin-left: auto;
 }
 .down-form-title {
   font-weight: 500;
@@ -653,6 +653,7 @@ body {
   border: none;
   border-radius: 4px;
   color: var(--primiry-white-color);
+  cursor: pointer;
 }
 
 /* modal window */
@@ -727,11 +728,8 @@ body {
   position: relative;
 }
 .label-name {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   color: #8e8f99;
   letter-spacing: 0.04em;
   margin-bottom: 4px;
@@ -739,6 +737,7 @@ body {
 }
 .label-name-checbox {
   display: flex;
+  align-items: center;
 }
 
 .accent-policy {
@@ -755,6 +754,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 360px;
   height: 138px;
+  padding-top: 8px;
+  padding-left: 16px;
 }
 .modal-comments:focus {
   border-color: var(--button-color);
@@ -780,9 +781,12 @@ body {
 .closing:hover,
 .closing:focus {
   background-color: var(--active-color);
+  fill: var(--modal-wndw-clr);
 }
 .modal-icon-close {
-  fill: var(--main-text-color);
+  width: 8px;
+  height: 8px;
+  transition: background-color var(--animation) linear;
 }
 .modal-icon {
   position: absolute;
@@ -841,9 +845,3 @@ body {
 .submit-button:focus {
   background-color: var(--active-color);
 }
-
-/**
-  |============================
-  | 
-  |============================
-*/
