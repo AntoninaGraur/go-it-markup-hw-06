@@ -42,6 +42,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .list {
   list-style: none;
 }
@@ -840,3 +841,9 @@ body {
 .submit-button:focus {
   background-color: var(--active-color);
 }
+
+/**
+  |============================
+  | 
+  |============================
+*/
